@@ -39,11 +39,11 @@ $("#submit").click(function(event){
 
       $.each(data.Search, function(i,movie){
         movieHTML += '<li>';
-        movieHTML += '<div class="poster-wrap">';
+        movieHTML += '<a href="http://www.imdb.com/title/'+ movie.imdbID + '/"><div class="poster-wrap">';
         if(movie.Poster =="N/A"){
           movieHTML += '<i class="material-icons poster-placeholder">crop_original</i>';
         }else{
-          movieHTML += '<img class="movie-poster" src="' + movie.Poster + '"> </div>';
+          movieHTML += '<img class="movie-poster" src="' + movie.Poster + '"> </div></a>';
         }
         movieHTML += '<span class="movie-title">' + movie.Title  + '</span>';
         movieHTML += '<span class="movie-year">' + movie.Year + '</span> </li>';
